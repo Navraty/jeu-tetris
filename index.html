@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </body>
+    <title>My-Tetris</title>
+  </head>
+  <body> 
+    <div class="container-parent px-10 py-5">
+      <canvas id="board" class="game-board"></canvas>
+
+        <!-- bloque -->
+        <div  class="container-app">
+          <div class="img-game">
+            <span class="font-bold text-[40px] text-green-800">TETRIS</span>
+            <canvas id="next" class="next"></canvas>
+              <p>Score: <span id="score">0</span></p>
+              <p>Lines: <span id="lines">0</span></p>
+              <p>Level: <span id="level">0</span></p>
+            </canvas>
+            <span id="timer"></span>
+            <p class="piece-label">Next: </p>
+            <p class="piece-label">Hold: </p>
+            <canvas id="hold" class="hold"></canvas>
+          </div>
+
+          <!-- bloque du bas -->
+          <div class="flex flex-col py-5 gap-2">
+            <button onclick="timer(this)" class="play-button text-white font-bold">Start/Pause</button>
+            <button class="music-button" data-playing="false" role="switch" aria-checked="false">
+            <span class="bg-yelow-500 border border-black px-5 py-1 bg-gray-800 text-white">Music On/Off</span>
+            </button>
+            <span class="font-bold text-2xl">Controls:</span>
+            <span class="w-[20px] flex gap-1 "><img src="./images/haut.png" alt="">Rotate </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/left.png" alt="">Left </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/right.png" alt="">Right </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/bottom.png" alt="">Down </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/entrer.png" alt="">Pause </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/space.png" alt="">Drop </span>
+            <span class="w-[20px] flex gap-1"><img src="./images/Esc.png" alt="">END</span>
+          </div>
+        </div
+      </div>
+      <audio src='https://upload.wikimedia.org/wikipedia/commons/e/e5/Tetris_theme.ogg'></audio>
+      <script type="text/javascript" src="constants.js"></script>
+      <script type="text/javascript" src="play.js"></script>
+      <script type="text/javascript" src="tetrominos.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <script type="text/javascript" src="musique.js"></script>
+  </body>   
+  
+</html>

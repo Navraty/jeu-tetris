@@ -1,0 +1,42 @@
+* {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  cursive;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 200px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-board {
+  border: solid 2px;
+}
+
+.play-button {
+  background-color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* identifier */
+.container-app{
+  display: flex;
+  gap: 20px;
+}
+
+.container-parent{
+  display: flex;
+  gap: 40px;
+  width: 100%;
+
+
+  & .next{
+    border: black 2px solid;
+  }
+}
